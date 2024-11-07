@@ -7,7 +7,9 @@ public class Main {
         
         System.out.println("Quantos Quilômetros seu Carro faz por Litro de Combustivel?");
         double consumo = Metodo.isInteger();
-        Carro carro = new Carro(consumo);
+        System.out.println("E quantos Litros o Tanque do seu Carro comporta?");
+        double tanque =  Metodo.isInteger();
+        Carro carro = new Carro(consumo, tanque);
 
         do{
             System.out.println("Qual operação deseja realizar?\n 1-Adcionar Gasolina\n 2-Obter Combustível\n 3-Percorrer Percurso\n 0-Finalizar\n");
@@ -28,7 +30,7 @@ public class Main {
             else if(op==0){
                 break;
             }else{
-                System.out.println("Valor não corresponde á nenhuma Operação");
+                System.out.println("\nValor não corresponde á nenhuma Operação\n");
             }
         }while(true);
         

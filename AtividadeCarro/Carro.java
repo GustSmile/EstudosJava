@@ -2,13 +2,19 @@ package AtividadeCarro;
 
 public class Carro {
 
-    double combustivel, consumo;
-    public Carro(double consumo){
+    double combustivel, consumo, tanque;
+    public Carro(double consumo, double tanque){
         this.consumo = consumo;
+        this.tanque = tanque;
     }
     public void adicionarCombustivel(double comb)
     {
-        this.combustivel+=comb;
+        double total = combustivel+comb;
+        if(total>tanque){
+            System.out.println("Quantidade não suportada pelo Tanque");
+        }else{
+            combustivel+=comb;
+        }
     }
     public void obterCombustivel(){
         System.out.println(this.combustivel+" L de Combustível\n");
