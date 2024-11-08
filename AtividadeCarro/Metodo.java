@@ -4,7 +4,7 @@ import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class Metodo {
-    public static double isInteger() // METODO PARA CONFERIR NUMEROS
+    public static double isInteger() // METODO PARA CONFERIR NUMEROS DOUBLE
 	{
         Scanner leitor = new Scanner(System.in);
 		do{
@@ -22,7 +22,8 @@ public class Metodo {
 		}while(true);
 		
 	}
-	public static int isIntegerInt() // METODO PARA CONFERIR NUMEROS
+	
+	public static int isIntegerInt() // METODO PARA CONFERIR NUMEROS INT
 	{
         Scanner leitor = new Scanner(System.in);
 		do{
@@ -38,7 +39,6 @@ public class Metodo {
 				leitor.next();
 			}
 		}while(true);
-		
 	}
 }
 
