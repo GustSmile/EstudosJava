@@ -39,7 +39,7 @@ public class Main {
 			System.out.println();
 
 	//TIPO--TIPO--TIPO--TIPO--TIPO
-			System.out.println("Digite o Tipo de sua Conta:\n1-Conta Corrente\n2-Conta poupança");
+			System.out.println("Digite o Tipo de sua Conta:\n1-Conta Corrente\n2-Conta Poupança");
 			do{
 				tipo = Metodo.isIntegerInt();
 				if (tipo>0 && tipo<3) {
