@@ -53,7 +53,7 @@ public class Conta{
 		this.saldo = sald;
 	}
 	public void getSaldo(){
-		System.out.println("Saldo: "+saldo);
+		System.out.println("Saldo: R$"+saldo);
 	}
 
 	//			DEPOSITAR

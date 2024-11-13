@@ -32,12 +32,12 @@ public class Metodo {
 			try{
                 double valor = leitor.nextDouble();
 				if (valor<0){
-					System.out.println("\nNão é possível inserir um valor negativo");
+					System.out.println("Digite um número válido!");
 				}else{
 					return valor;
 				}
 			} catch (InputMismatchException e){
-				System.out.println("\nDigite um número válido!");
+				System.out.println("Digite um número válido!");
 				leitor.next();
 			}
 		}while(true);
@@ -51,12 +51,12 @@ public class Metodo {
 			try{
                 int valor = leitor.nextInt();
                 if (valor<0){
-					System.out.println("Não é possível inserir um valor negativo");
+					System.out.println("Digite um número válido!");
 				}else{
 					return valor;
 				}
 			} catch (InputMismatchException e){
-				System.out.println("Digite um número válido!\n");
+				System.out.println("Digite um número válido!");
 				leitor.next();
 			}
 		}while(true);
