@@ -10,10 +10,10 @@ public class Conta{
 	//private static Scanner leitor = new Scanner(System.in);
 
 	public Conta() {
-		this.agencia = agencia;
-		this.titular = titular;
-		this.tipo = tipo;
-		this.saldo = saldo;
+		this.agencia = "Desconhecido";
+		this.titular = "Desconhecido";
+		this.tipo = "Desconhecido";
+		this.saldo = 0;
 	}
 
 	//			AGENCIA
