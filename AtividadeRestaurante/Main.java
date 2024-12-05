@@ -108,16 +108,5 @@ public class Main {
 
             pedido.ImprimirDados();
 
-
-        /*  IDEIA ABANDONADA
-        do{
-            System.out.println("Qual operação deseja realizar?\n1-Cadastrar Cliente\n2-Cadastrar Garcom\n3-Cadastrar Produto\n4-Mostrar Cliente\n5-Mostrar Garcom\n6-Mostrar Produto");
-            op = Metodo.isIntegerInt();
-            if(op == 1 ){
-                System.out.println("CADASTRO DE CLIENTE");
-            }
-        }while(true);
-         */
-
     }
 }

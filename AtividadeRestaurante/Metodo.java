@@ -25,8 +25,6 @@ public class Metodo {
 		}while(true);
 	}
 
-
-
     public static int isIntegerInt() // METODO PARA CONFERIR NUMEROS INT
 	{
         Scanner leitor = new Scanner(System.in);
@@ -74,7 +72,7 @@ public class Metodo {
         return parte1 + "." + parte2 + "." + parte3 + "-" + parte4;
     }
 
-    public static String FormatarTelefone(String telefone){
+    public static String FormatarTelefone(String telefone){// METODO PARA FORMATAR STRING PARA TELEFONE
         String parte1 = telefone.substring(0,telefone.length() - 9);
         String parte2 = telefone.substring(2,telefone.length() - 8);
         String parte3 = telefone.substring(3,telefone.length() - 4);
