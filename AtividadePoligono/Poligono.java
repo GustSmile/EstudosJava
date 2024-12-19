@@ -16,7 +16,7 @@ public class Poligono {
     }
 
     public void mostrarArea(){
-        System.out.println("Area de Poligono");
+        System.out.println("Área de Polígono");
     }
 
 }

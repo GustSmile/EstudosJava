@@ -29,6 +29,6 @@ public class Triangulo extends Poligono{
     public void mostrarArea(){
         double area = lado*altura;
         area = area/2;
-        System.out.println("A área do triangulo é "+area+"²");
+        System.out.println("A área do triângulo é "+area+"²");
     }
 }

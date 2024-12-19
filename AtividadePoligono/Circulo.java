@@ -20,6 +20,6 @@ public class Circulo extends Poligono{
     public void mostrarArea(){
         double area = raio*raio;
         area = area*pi;
-        System.out.println("A área do circulo é "+area+"²");
+        System.out.println("A área do círculo é "+area+"²");
     }
 }

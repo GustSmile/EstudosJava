@@ -28,6 +28,6 @@ public class Retangulo extends Poligono{
 
     public void mostrarArea(){
         double area = lado*altura;
-        System.out.println("A área do retangulo é "+area+"²");
+        System.out.println("A área do retângulo é "+area+"²");
     }
 }
