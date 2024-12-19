@@ -1,0 +1,5 @@
+1) Escreva em Java uma classe Contador, que encapsule um valor usado para contagem de
+itens quaisquer. A classe deve oferecer métodos que devem:
+a. Zerar;
+b. Incrementar;
+c. Retornar o valor do contador.
