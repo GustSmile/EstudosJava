@@ -1,0 +1,4 @@
+3) Crie uma classe chamada “Triângulo” com atributos para armazenar os três lados do 
+triângulo. Implemente métodos para:
+a. verificar se é um triângulo válido.
+b. Mostrar o tipo de triangulo (isósceles, equilátero ou escaleno)
