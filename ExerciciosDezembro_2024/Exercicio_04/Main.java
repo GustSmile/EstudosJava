@@ -8,7 +8,7 @@ public class Main {
         int op;
         ArrayList<Autor>   listAutor = new ArrayList<>();
         ArrayList<Cliente> listClientes = new ArrayList<>();
-        ArrayList<Livro>  listLivros = new ArrayList<>();
+        ArrayList<Livro>   listLivros = new ArrayList<>();
         ArrayList<Integer> listID = new ArrayList<>();
         ArrayList<Integer> listIDAutor = new ArrayList<>();
         ArrayList<Integer> listIDCliente = new ArrayList<>();
@@ -40,6 +40,10 @@ public class Main {
                         leitor.nextLine();
                     }else{
                         Livro livro = cadastrarLivro(listIDLivro, listIDAutor, listAutor);
+                        listID.add(livro.getId());
+                        listIDLivro.add(livro.getId());
+                        listLivros.add(livro);
+                        imprimirLivro(livro);
                     }
                     continue;
 
@@ -64,6 +68,15 @@ public class Main {
                         imprimirCliente(buscaCliente);
                     }
                     continue;
+
+                case(6): // BUSCANDO LIVRO
+                    Livro buscaLivro = buscarLivro(listIDLivro, listLivros);
+                    System.out.println("\nBuscando Livro...\n");
+                    if(buscaLivro==null){
+                        System.out.println("\nID não correspondente à nenhum Livro!");
+                    }else{
+                        imprimirLivro(buscaLivro);
+                    }
 
                 case(0):
                     break;
@@ -195,6 +208,16 @@ public class Main {
 
         Livro livro = new Livro(titulo, buscaAutor, pag, id);
         return livro;
+    } // IMPRIMIR
+    public static void imprimirLivro(Livro livro){
+        Scanner leitor = new Scanner(System.in);
+        System.out.println("\n__________"+"\nLivro");
+        System.out.println("Titulo: "+livro.getTitulo());
+        System.out.println("Autor: "+livro.getAutor().getNome());
+        System.out.println("quant. Páginas: "+livro.getPaginas());
+        System.out.println("ID do Livro: "+livro.getId());
+        System.out.println();
+        leitor.nextLine();
     } // BUSCAR LIVRO
     public static Livro buscarLivro(ArrayList<Integer> listIDLivro, ArrayList<Livro> listLivros){
         Scanner leitor = new Scanner(System.in);
