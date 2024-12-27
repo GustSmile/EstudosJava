@@ -143,13 +143,23 @@ public class Main {
                                 leitor.nextLine();
                                 continue;
                             }else{
-                                clienteDevolvendo.devolverLivro(livroEmprestando.getId());
-                                int quantidade = livroEmprestando.getQuantidade()+1;
-                                livroEmprestando.setQuantidade(quantidade);
-                                System.out.println("\nCliente: "+clienteDevolvendo.getNome());
-                                System.out.println("ID:      "+clienteDevolvendo.getId());
-                                System.out.println("Livros Emprestados:");
-                                clienteDevolvendo.imprimirLivrosEmprestados(listLivros);
+                                int n=0;
+                                for(int i=0; i<clienteDevolvendo.getLivrosEmprestadosID().size(); i++){
+                                    if(livroEmprestando.getId()==clienteDevolvendo.getLivrosEmprestadosID().get(i)){
+                                        clienteDevolvendo.devolverLivro(livroEmprestando.getId());
+                                        int quantidade = livroEmprestando.getQuantidade()+1;
+                                        livroEmprestando.setQuantidade(quantidade);
+                                        System.out.println("\nCliente: "+clienteDevolvendo.getNome());
+                                        System.out.println("ID:      "+clienteDevolvendo.getId());
+                                        System.out.println("Livros Emprestados:");
+                                        clienteDevolvendo.imprimirLivrosEmprestados(listLivros);
+                                        n=1;
+                                    }
+                                }
+                                if(n==0){
+                                    System.out.println("Este Cliente não possui este Livro Emprestado");
+                                }
+                                
                             }
                         }
                     }
