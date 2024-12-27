@@ -5,6 +5,8 @@ import java.util.Random;
 import java.util.Scanner;
 
 public class Cliente extends Pessoa{
+    private ArrayList<Integer> livrosEmprestadosID = new ArrayList<>();
+
     public Cliente (String nome, int id){
         super(nome, id);
     }
@@ -54,4 +56,37 @@ public class Cliente extends Pessoa{
             return null;
         }
     }
+
+    // EMPRESTAR LIVROS
+    public ArrayList<Integer> getLivrosEmprestadosID() {
+        return livrosEmprestadosID;
+    }
+    public void setLivrosEmprestados(ArrayList<Integer> livrosEmprestadosID) {
+        this.livrosEmprestadosID = livrosEmprestadosID;
+    }
+
+    public void emprestarLivro(int livroID){
+        this.livrosEmprestadosID.add(livroID);
+    }
+    public void devolverLivro(int livroID){
+        for(int i=0; i<livrosEmprestadosID.size(); i++){
+            if(livroID == livrosEmprestadosID.get(i)){
+                livrosEmprestadosID.remove(i);
+            }
+        }
+    }
+
+    public void imprimirLivrosEmprestados(ArrayList<Livro> livrosEmprestados){
+        for(int i=0; i<livrosEmprestadosID.size(); i++){
+            for(int n=0; n<livrosEmprestados.size(); n++){
+                if(livrosEmprestadosID.get(i)==livrosEmprestados.get(n).getId()){
+                    System.out.println(livrosEmprestados.get(n).getTitulo());
+                }
+            }
+        }
+    }
+    /*public int devolverLivro(ArrayList<Integer> livrosEmprestadosID){
+
+    }*/
+
 }

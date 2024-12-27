@@ -80,6 +80,81 @@ public class Main {
                     }
                     continue;
 
+                case(7): // EMPRESTANDO LIVRO
+                    if(listClientes.isEmpty()){
+                        System.out.println("É preciso haver um Cliente cadastrado no Sistema!");
+                        leitor.nextLine();
+                    }else if(listIDLivro.isEmpty()){
+                        System.out.println("É preciso haver um Livro cadastrado no Sistema!");
+                        leitor.nextLine();
+                    }else{
+                        System.out.println("Emprestando Livro...");
+                        Cliente clienteEmprestando = Cliente.buscarCliente(listIDCliente, listClientes);
+                        if(clienteEmprestando==null){
+                            System.out.println("\nID não correspondente à nenhum Cliente!");
+                            leitor.nextLine();
+                            continue;
+                        }
+                        Livro livroEmprestando = Livro.buscarLivro(listIDLivro, listLivros);
+                        if(livroEmprestando==null){
+                            System.out.println("\nID não correspondente à nenhum Livro!");
+                            leitor.nextLine();
+                            continue;
+                        }
+                        if(livroEmprestando.getQuantidade()<=0){
+                            System.out.println("Livro indisponível");
+                            continue;
+                        }else{
+                            clienteEmprestando.emprestarLivro(livroEmprestando.getId());
+                            int quantidade = livroEmprestando.getQuantidade()-1;
+                            livroEmprestando.setQuantidade(quantidade);
+                            System.out.println("\nCliente: "+clienteEmprestando.getNome());
+                            System.out.println("ID:        "+clienteEmprestando.getId());
+                            System.out.println("Livros Emprestados:");
+                            clienteEmprestando.imprimirLivrosEmprestados(listLivros);
+                        }
+                    }
+                    leitor.nextLine();
+                    continue;
+
+                case(8):
+                    if(listClientes.isEmpty()){
+                        System.out.println("É preciso haver um Cliente cadastrado no Sistema!");
+                        leitor.nextLine();
+                    }else if(listIDLivro.isEmpty()){
+                        System.out.println("É preciso haver um Livro cadastrado no Sistema!");
+                        leitor.nextLine();
+                    }else{
+                        System.out.println("Devolvendo Livro...");
+                        Cliente clienteDevolvendo = Cliente.buscarCliente(listIDCliente, listClientes);
+                        if(clienteDevolvendo==null){
+                            System.out.println("\nID não correspondente à nenhum Cliente!");
+                            leitor.nextLine();
+                            continue;
+                        }
+                        Livro livroEmprestando = Livro.buscarLivro(listIDLivro, listLivros);
+                        if(livroEmprestando==null){
+                            System.out.println("\nID não correspondente à nenhum Livro!");
+                            leitor.nextLine();
+                            continue;
+                        }else{
+                            if(clienteDevolvendo.getLivrosEmprestadosID().isEmpty()){
+                                System.out.println("Este Cliente não possui Livros Emprestados");
+                                leitor.nextLine();
+                                continue;
+                            }else{
+                                clienteDevolvendo.devolverLivro(livroEmprestando.getId());
+                                int quantidade = livroEmprestando.getQuantidade()+1;
+                                livroEmprestando.setQuantidade(quantidade);
+                                System.out.println("\nCliente: "+clienteDevolvendo.getNome());
+                                System.out.println("ID:      "+clienteDevolvendo.getId());
+                                System.out.println("Livros Emprestados:");
+                                clienteDevolvendo.imprimirLivrosEmprestados(listLivros);
+                            }
+                        }
+                    }
+                    leitor.nextLine();
+                    continue;
                 case(0):
                     break;
 
@@ -89,18 +164,6 @@ public class Main {
             }break;
         }while(true);
     }
-
-
-
-    
-
-
-
-    
-
-
-
-    
 }
 
 

@@ -9,14 +9,14 @@ public class Livro {
     private Autor autor;
     private int paginas;
     private int id;
-    private int status;
+    private int quantidade;
 
-    public Livro (String titulo, Autor autor, int paginas, int id, int status){
+    public Livro (String titulo, Autor autor, int paginas, int id, int quantidade){
         this.titulo = titulo;
         this.autor = autor;
         this.paginas = paginas;
         this.id = id;
-        this.status = status;
+        this.quantidade = quantidade;
     }
 
     //__________TITULO
@@ -53,21 +53,12 @@ public class Livro {
     }
 
 
-    //__________STATUS
-    public int getStatus() {
-        return status;
+    //__________QUANTIDADE
+    public int getQuantidade() {
+        return quantidade;
     }
-    public void setStatus(int status) {
-        this.status = status;
-    }
-    public void imprimirStatus(){
-        if(status==1){
-            System.out.println("Livro disponível!");
-        }else if(status==0){
-            System.out.println("Livro indisponível!");
-        }else{
-            System.out.println("Erro na variável de vericação de Status!");
-        }
+    public void setQuantidade(int quantidade) {
+        this.quantidade = quantidade;
     }
 
 
@@ -98,7 +89,10 @@ public class Livro {
             id = 1000 + random.nextInt(9000); // GERADOR DE ID
         } while (listID.contains(id));
 
-        Livro livro = new Livro(titulo, buscaAutor, pag, id, 1);
+        System.out.println("Qual a quantidade deste Livro?");
+        int quant = Metodo.isNumber();
+
+        Livro livro = new Livro(titulo, buscaAutor, pag, id, quant);
         return livro;
     }
     
@@ -106,10 +100,11 @@ public class Livro {
     public static void imprimirLivro(Livro livro){
         Scanner leitor = new Scanner(System.in);
         System.out.println("\n__________"+"\nLivro");
-        System.out.println("Titulo: "+livro.getTitulo());
-        System.out.println("Autor: "+livro.getAutor().getNome());
+        System.out.println("Titulo:        "+livro.getTitulo());
+        System.out.println("Autor:         "+livro.getAutor().getNome());
         System.out.println("quant/Páginas: "+livro.getPaginas());
-        System.out.println("ID do Livro: "+livro.getId());
+        System.out.println("ID do Livro:   "+livro.getId());
+        System.out.println("Quantidade:    "+livro.getQuantidade());
         System.out.println();
         leitor.nextLine();
     }
