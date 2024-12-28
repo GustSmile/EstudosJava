@@ -1,34 +1,44 @@
 package Exercicio_04;
 
 public class Menu {
-    public static void mostrarMenu(){
-        /*
-        System.out.println("\nEscolha um Número referente à uma Operação:"
-        +"\n 1 - Cadastrar Autor"
-        +"\n 2 - Cadastrar Cliente"
-        +"\n 3 - Cadastrar Livro"
-        +"\n 4 - Emprestar Livro"
-        +"\n 5 - Devolver Livro"
-        +"\n 6 - Devolver Livro"
-        +"\n 7 - Devolver Livro"
-        +"\n 8 - Devolver Livro"
-        +"\n 9 - Devolver Livro"
-        +"\n 10 - Devolver Livro"
-        +"\n 11 - Devolver Livro"
-        +"\n 0 - Finalizar\n"
-        )
-        */
-        System.out.println("\nEscolha um Número referente à uma Operação:"
-        +"\n 1 - Cadastrar Autor"
-        +"\n 2 - Cadastrar Cliente"
-        +"\n 3 - Cadastrar Livro"
-        +"\n 4 - Buscar Autor"
-        +"\n 5 - Buscar Cliente"
-        +"\n 6 - Buscar Livro"
-        +"\n 7 - Emprestar Livro"
-        +"\n 8 - Devolver Livro"
+    public static void mostrarMenuMain(){
+        System.out.println("\nEscolha um Número referente à um Grupo de Aplicações:"
+        +"\n 1 - Cadastrar"
+        +"\n 2 - Buscar"
+        +"\n 3 - Imprimir Todos Itens"
+        +"\n 4 - Operações"
         +"\n 0 - Finalizar\n"
         );
-    
+    }
+    public static void mostrarMenuCadastro(){
+        System.out.println("\nEscolha um Número referente à uma Operação de Cadastro:"
+        +"\n 1 - Cadastrar Autor"
+        +"\n 2 - Cadastrar Cliente"
+        +"\n 3 - Cadastrar Livro"
+        +"\n 0 - Retornar\n"
+        );
+    }
+    public static void mostrarMenuBusca(){
+        System.out.println("\nEscolha um Número referente à uma Operação de Busca:"
+        +"\n 1 - Buscar Autor"
+        +"\n 2 - Buscar Cliente"
+        +"\n 3 - Buscar Livro"
+        +"\n 0 - Retornar\n"
+        );
+    }
+    public static void mostrarMenuImpressao(){
+        System.out.println("\nEscolha um Número referente à uma Operação de Impressão:"
+        +"\n 1 - Imprimir todos Autores"
+        +"\n 2 - Imprimir todos Cliente"
+        +"\n 3 - Imprimir todos Livro"
+        +"\n 0 - Retornar\n"
+        );
+    }
+    public static void mostrarMenuEmprestar(){
+        System.out.println("\nEscolha um Número referente à uma Operaçõe:"
+        +"\n 1 - Emprestar Livro"
+        +"\n 2 - Devolver Livro"
+        +"\n 0 - Retornar\n"
+        );
     }
 }
