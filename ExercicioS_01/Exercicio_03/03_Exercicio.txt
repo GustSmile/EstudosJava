@@ -1,0 +1,22 @@
+3) Crie uma classe Calculo. Esta classe não terá atributos. Ela deverá 
+possuir os métodos para calcular:
+a. Fibonacci. A série de Fibonacci é a seguinte: 0, 1, 1, 2, 3, 5, 8, 13, 
+21, etc. Para calculá-la, o primeiro elemento vale 0, o segundo vale 
+1, daí por diante, o n-ésimo elemento vale o (n-1)-ésimo elemento 
+somado ao (n-2)-ésimo elemento (ex: 8 = 5 + 3). Este método 
+deverá receber um número inteiro “n” e mostrar os “n” primeiros 
+números da série de Fibonacci. Ex.: Fibonacci(6) deverá imprimir 
+os 6 primeiros elementos: : 0, 1, 1, 2, 3, 5.
+b. Fatorial. O fatorial de um número n é n * (n-1) * (n-2) * ... * 1. 
+Lembre-se de utilizar os parênteses.
+i. O fatorial de 0 é 1
+ii. O fatorial de 1 é (0!) * 1 = 1
+iii. O fatorial de 2 é (1!) * 2 = 2
+iv. O fatorial de 3 é (2!) * 3 = 6
+v. O fatorial de 4 é (3!) * 4 = 24
+Este método deverá receber um número inteiro “n” e mostrar o 
+fatorial deste número. Ex.: Fatorial(6) = 6*5*4*3*2*1 = 720
+c. Baskara. Este método deverá receber os valores a, b e c de uma 
+equação do segundo grau, calcular e mostrar os valores das raízes
+x’ e x”. Obs.: cuidado com os casos especiais: a = 0 (não é 
+equação do segundo grau); Δ < 0 (Não possui raiz real)
