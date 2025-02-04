@@ -24,7 +24,7 @@ public class Circulo {
     public void calculaPerimetro(double raio){
         double perimetro = (pi*2)*raio;
         String perimetroString = String.format("%.2f", perimetro);
-        System.out.println("A perimetro deste Círculo é: "+perimetroString+"²");
+        System.out.println("A perimetro deste Círculo é: "+perimetroString);
     }
 
 }
